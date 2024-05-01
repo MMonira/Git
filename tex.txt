@@ -25,3 +25,26 @@ category
 tags
 total_calorie
 created_by
+
+
+pip freeze > requirements.txt
+
+
+Django ENvironment variables
+   python-dotenv(to keep all our sensitive data secure)
+      pip install python-dotenv
+
+IMPORT and initialize python-dotenv
+
+
+   if case (is there an issue)(pylance problem):
+      1. copy the path(upto env(my given name was env)) >C:\Users\h\Downloads\MoniraLabexam4\env
+      2. in vscode :  ctrl + shift + p
+      3. python : select interpreter 
+      4. enter enterpreter path > 
+      5. paste the path: C:\Users\h\Downloads\MoniraLabexam4\env
+      6. hit enter
+      
+
+
+
