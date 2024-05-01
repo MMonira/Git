@@ -1,0 +1,87 @@
+{% extends "main.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Ingredients</th>
+                <th>Instructions</th>
+                <th>Preparation Time</th>
+                <th>Cooking Time</th>
+                <th>Total Time</th>
+                <th>Difficulty Level</th>
+                <th>Nutrition Information</th>
+                <th>Recipe Image</th>
+                <th>Category</th>
+                <th>Tags</th>
+                <th>Total Calorie</th>
+                <th>Created By</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Populate table rows with data from your backend -->
+            {% for i in info %}
+            <tr>
+                <td>{{i.title}}</td>
+                <td>{{i.ingredients}}</td>
+                <td>{{i.instructions}}</td>
+                <td>{{i.preparation_time}}</td>
+                <td>{{i.cooking_time}}</td>
+                <td>{{i.total_time}}</td>
+                <td>{{i.difficulty_level}}</td>
+                <td>{{i.nutrition_information}}</td>
+                <td>
+                    <img src="/{{i.recipe_image}}" alt="" width= "60px">
+                </td>
+                <td>{{i.category}}</td>
+                <td>{{i.tags}}</td>
+                <td>{{i.total_calorie}}</td>
+                <td>{{i.created_by}}</td>
+                <td>
+                    {% if user.user_type == 'chef' %}
+                    <a href="{% url 'editrecipe' i.id %}">Edit</a>
+                    <a href="{% url 'delete' i.id %}">Delete</a>
+                    {% endif %}
+                    <a href="{% url 'view' i.id %}">view</a>
+                </td>
+            </tr>
+            {% endfor %}
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+{% endblock content %}

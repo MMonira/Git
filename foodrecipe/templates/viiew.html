@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            width: 50%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 10px;
+        }
+        .card-content {
+            width: 100%;
+        }
+        .card-content h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .card-content p {
+            margin: 5px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+   
+        <img src="/{{info.recipe_image}}" alt="" width="50px" height="auto">
+        
+        <div class="card-content">
+            <h2>{{info.title}}</h2>
+          
+            <p>{{info.ingredients}}</p>
+        
+            <p>{{info.instructions}}</p>
+            <p>{{info.preparation_time}}</p>
+            <p>{{info.cooking_time}}</p>
+            <p>{{info.total_time}}</p>
+            <p>{{info.difficulty_level}}</p>
+            <p>{{info.nutrition_information}}</p>
+            <p>{{info.category}}</p>
+            <p>{{info.total_calorie}}</p>
+            <p>{{info.created_by}}</p>
+            <p>{{info.tags}}</p>
+        </div>
+    </div>
+</body>
+</html>

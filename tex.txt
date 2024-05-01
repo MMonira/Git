@@ -1,0 +1,27 @@
+
+username
+email
+gender 
+age
+city
+country
+user type
+
+
+username
+password
+
+
+title
+ingredients
+instructions
+preparation_time
+cooking_time
+total_time
+difficulty_level
+nutrition_information
+recipe_image
+category
+tags
+total_calorie
+created_by

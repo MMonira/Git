@@ -1,0 +1,140 @@
+{% extends "main.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+        }
+        .profile-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .profile-info {
+            margin-bottom: 10px;
+        }
+        .profile-info label {
+            font-weight: bold;
+        }
+        .profile-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+        
+            <div>
+            {% if user.user_type == 'chef' %}
+            <div class="profile-info">
+                <label for="username">Username:</label>
+                <p id="username">{{info.myuser.username}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="email">Email:</label>
+                <p id="email">{{info.myuser.email}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="gender">Gender:</label>
+                <p id="gender">{{info.myuser.Gender}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="age">Age:</label>
+                <p id="age">{{info.myuser.age}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="city">City:</label>
+                <p id="city">{{info.myuser.city}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="country">Country:</label>
+                <p id="country">{{info.myuser.country}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="user_type">User Type:</label>
+                <p id="user_type">{{info.myuser.user_type}}</p>
+
+            </div>
+            <div class="profile-info">
+                <label for="user_type">experience:</label>
+                <p id="user_type">{{info.experience}}</p>
+
+            </div>
+            <div class="profile-info">
+                <label for="user_type">resume:</label>
+                <p id="user_type">{{info.resume}}</p>
+
+            </div>
+            <div class="profile-info">
+                <label for="user_type">skill:</label>
+                <p id="user_type">{{info.skill}}</p>
+
+            </div>
+            <div>
+                <img src="/{{info.profile_pic}}" alt="" width="40px">
+            </div>
+            
+            {% elif user.user_type == 'viewer' %}
+
+            <div class="profile-info">
+                <label for="username">Username:</label>
+                <p id="username">{{info.myuser.username}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="email">Email:</label>
+                <p id="email">{{info.myuser.email}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="gender">Gender:</label>
+                <p id="gender">{{info.myuser.Gender}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="age">Age:</label>
+                <p id="age">{{info.myuser.age}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="city">City:</label>
+                <p id="city">{{info.myuser.city}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="country">Country:</label>
+                <p id="country">{{info.myuser.country}}</p>
+            </div>
+            <div class="profile-info">
+                <label for="user_type">User Type:</label>
+                <p id="user_type">{{info.myuser.user_type}}</p>
+
+            </div>
+            <div>
+                <img src="/{{info.profile_pic}}" alt="" width="40px">
+            </div>
+            <div class="profile-info">
+                <p>Favourite : {{info.favourite}}</p>
+            </div> 
+            
+            {% endif %}
+        </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+{% endblock content %}

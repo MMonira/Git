@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* home */
+
+.header{
+    background: black;
+    color: #fff;
+}
+.navber{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 110px;
+    border-radius: 100%;
+}
+.logo div{
+    font-size: 35px;
+}
+.navber ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navber ul li{
+    list-style: none;
+}
+.navber ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.navber ul li a:hover{
+    color: antiquewhite;
+    border-bottom: 2px solid bisque;
+}
+.fir{
+    background: bisque;
+    padding: 40px 101px;
+}
+.fir h1,.self h1{
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 40px;
+}
+.fir p{
+    font-size: 21px;
+}
+
+.divi{
+    height: 1vh;
+    width: 100%;
+    background-color: black;
+}
+
+/* About */
+
+.cimg{
+    width: 225px;
+    margin: auto;
+}
+.self{
+    background: antiquewhite;
+    padding: 50px 100px;
+    font-size: 20px;
+}
+/* contact */
+
+.form{
+    width: 70vw;
+    margin: auto;
+}
